@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  rspec:
+    build: ./rspec
+    command: bash
+    volumes:
+      - rspec-data-sync:/app:rw
+
+volumes:
+  rspec-data-sync:
+    external: true
