@@ -3,7 +3,7 @@ version: '2'
 services:
   rspec:
     build: ./rspec
-    command: bash
+    command: guard
     volumes:
       - rspec-data-sync:/app:rw
 
