@@ -1,5 +1,5 @@
 
-require 'weather_query/weather_query'
+require 'basics/weather_query/weather_query'
 
 describe WeatherQuery do
   describe '.forecast' do
@@ -41,7 +41,7 @@ describe WeatherQuery do
       end
     end
 
-    context 'parse errors' do 
+    context 'parse errors' do
       let(:xml_response) do
         %q(
           <?xml version="1.0" encoding="utf-8"?>

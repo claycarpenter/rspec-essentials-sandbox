@@ -1,6 +1,8 @@
 
 module CustomerV1
   class Customer
+    attr_reader :discounts
+    
     def initialize(opts)
       @discounts = opts[:discounts]
     end

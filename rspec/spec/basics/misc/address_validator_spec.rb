@@ -1,5 +1,5 @@
 require 'rspec'
-require 'address_validator'
+require 'basics/misc/address_validator'
 
 describe AddressValidator do
   it "returns false for incomplete address" do

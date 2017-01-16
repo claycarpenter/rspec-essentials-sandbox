@@ -1,7 +1,7 @@
 require 'rspec'
 require 'rspec/expectations'
 
-require 'customer_v1/customer'
+require 'basics/customer_v1/customer'
 
 RSpec::Matchers.define :be_discounted do |product, expected|
   match do |customer|
@@ -15,7 +15,7 @@ RSpec::Matchers.define :be_discounted do |product, expected|
   end
 end
 
-class HaveDiscountOf
+class CustomerV1::HaveDiscountOf
   def initialize(expected)
     @expected = expected
   end
@@ -38,7 +38,7 @@ end
 
 describe "product discount" do
   def have_discount_of(discount)
-    HaveDiscountOf.new(discount)
+    CustomerV1::HaveDiscountOf.new(discount)
   end
 
   let(:product) { 'foo123' }

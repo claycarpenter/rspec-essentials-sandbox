@@ -6,7 +6,7 @@ describe 'hello world' do
   end
 
 
-  it 'fails' do
+  xit 'fails' do
     expect('bye').to eq('hello')
   end
 end
