@@ -3,7 +3,7 @@ require 'net/http'
 require 'json'
 require 'timeout'
 
-module WeatherQuery
+module WeatherQueryAdvanced
   extend self
 
   NetworkError = Class.new(StandardError)
