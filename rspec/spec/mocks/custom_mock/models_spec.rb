@@ -60,5 +60,19 @@ RSpec.describe CustomMock::ShoppingCart do
         expect(cart.total_price).to eq(num_products * price)
       end
     end
+
+    context "using RSpec's double" do
+      it "returns the sum of the prices of all products" do
+        num_products = 22
+        price = 100
+        cart = CustomMock::ShoppingCart.new
+        mock_product = double('CustomMock::Product', price: price)
+        some_products = [mock_product] * num_products
+
+        expect_any_instance_of(CustomMock::ShoppingCart).to receive(:products).and_return(some_products)
+
+        expect(cart.total_price).to eq(num_products * price)
+      end
+    end
   end
 end
